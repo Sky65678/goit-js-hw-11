@@ -8,7 +8,7 @@ let galleryIt = new SimpleLightbox('.gallery-item a', {
   captionDelay: 250,
 });
 
-export function renderGallery() {
+export function renderGallery(images) {
   const gallery = document.querySelector('.gallery');
   gallery.innerHTML = images
     .map(

@@ -1,18 +1,18 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { getPictures } from './js/pixabay-api';
+import { getImage } from './js/pixabay-api';
 import { renderGallery } from './js/render-functions';
 
 const formEl = document.querySelector('.search-form');
 const inputEl = document.querySelector('.searchInput');
 const loading = document.querySelector('.loading');
-export const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 
 // Обробник події submit для форми
 formEl.addEventListener('submit', e => {
   e.preventDefault();
-  const userImg = inputEl.elements.query.value.toLowerCase().trim();
+  const userImg = inputEl.value.toLowerCase().trim();
 
   if (userImg === '') {
     iziToast.error({
@@ -26,7 +26,7 @@ formEl.addEventListener('submit', e => {
   loading.style.display = 'flex';
   gallery.innerHTML = '';
 
-  getPictures(userImg)
+  getImage(userImg)
     .then(({ hits }) => {
       if (hits.length === 0) {
         iziToast.error({
