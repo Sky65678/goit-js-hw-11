@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vanilla App Template</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-  <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-8c59ed88.js">
-  <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-1cd1f9d9.css">
-  <link rel="stylesheet" href="/goit-js-hw-11/assets/index-0f1ee44c.css">
-</head>
-
-<body>
-  <div class="container">
-    <form class="search-form">
-      <input type="text" class="searchInput" placeholder="Search images...">
-      <button type="submit" class="js-btn">Search</button>
-    </form>
-    <div class="loading">
-      <span class="loader hidden"></span>
-      <p>Loading images, please wait...</p>
-    </div>
-    <ul class="gallery"></ul>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
     
-  </div>
-</body>
-
+    <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-65e4e6bd.js">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-1cd1f9d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-b9a988e7.css">
+  </head>
+  <body>
+    <div class="container">
+      <form class="search-form">
+        <input type="text" id="search-input" required placeholder="Search images..." />
+        <button type="submit">Search</button>
+      </form>
+      <ul class="gallery"></ul>
+      <div class="loader-container"><span class="loader hidden"></span></div>
+      <button class="more-img-btn hidden" type="button">Load more</button>
+    </div>
+    
+  </body>
 </html>
